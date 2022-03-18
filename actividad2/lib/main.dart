@@ -1,3 +1,4 @@
+import 'package:actividad2/paginas/Princial_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: Principal(),
     );
   }
 }
