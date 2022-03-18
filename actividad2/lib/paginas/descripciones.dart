@@ -17,8 +17,12 @@ class _DescripcionState extends State<Descripcion> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text("Descripciones"),
+        elevation: 0,
+        backgroundColor: Color.fromARGB(111, 67, 27, 114),
+        title: Text(
+          "Descripciones",
+          style: TextStyle(color: Colors.deepPurple),
+        ),
       ),
       body: MostrarDescipcion(),
     );
