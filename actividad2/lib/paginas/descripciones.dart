@@ -49,7 +49,7 @@ class _DescripcionState extends State<Descripcion> {
                   widget.descip['nombre'],
                   style: TextStyle(
                       color: Color.fromARGB(255, 138, 81, 236),
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600),
                 ),
               ),
