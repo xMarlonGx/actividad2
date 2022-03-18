@@ -1,5 +1,7 @@
 import 'package:actividad2/constantes/const.dart';
+import 'package:actividad2/paginas/descripciones.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
@@ -108,21 +110,50 @@ class _HomeState extends State<Home> {
           ),
           // BLOQUE 2
 
-          Center(
-            child: Container(
-              width: 385,
-              height: 200,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 151, 149, 149),
-                borderRadius: BorderRadius.circular(24),
-                image: DecorationImage(
-                    image: AssetImage('assets/paisajes/paisaje_1.jpg'),
-                    fit: BoxFit.cover),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Row(
+                children: List.generate(paisajes.length, (index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 30),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                alignment: Alignment.bottomCenter,
+                                child: Descripcion(
+                                  descip: paisajes[index],
+                                ),
+                                type: PageTransitionType.scale));
+                      },
+                      child: Column(
+                        children: [
+                          Center(
+                            child: Container(
+                              width: 385,
+                              height: 200,
+                              decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 151, 149, 149),
+                                borderRadius: BorderRadius.circular(24),
+                                image: DecorationImage(
+                                    image: AssetImage(paisajes[index]['img']),
+                                    fit: BoxFit.cover),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
           ),
 
           // BLOQUE 3
@@ -151,7 +182,16 @@ class _HomeState extends State<Home> {
                   return Padding(
                     padding: const EdgeInsets.only(right: 30),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                alignment: Alignment.bottomCenter,
+                                child: Descripcion(
+                                  descip: animales[index],
+                                ),
+                                type: PageTransitionType.scale));
+                      },
                       child: Column(
                         children: [
                           Container(
@@ -195,11 +235,20 @@ class _HomeState extends State<Home> {
             child: Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Row(
-                children: List.generate(animales.length, (index) {
+                children: List.generate(vertical.length, (index) {
                   return Padding(
                     padding: const EdgeInsets.only(right: 30),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                alignment: Alignment.bottomCenter,
+                                child: Descripcion(
+                                  descip: vertical[index],
+                                ),
+                                type: PageTransitionType.scale));
+                      },
                       child: Column(
                         children: [
                           Container(
@@ -209,7 +258,7 @@ class _HomeState extends State<Home> {
                                 color: Colors.black,
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
-                                    image: AssetImage(animales[index]['img']),
+                                    image: AssetImage(vertical[index]['img']),
                                     fit: BoxFit.cover)),
                           )
                         ],
