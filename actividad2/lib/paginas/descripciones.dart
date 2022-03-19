@@ -43,7 +43,7 @@ class _DescripcionState extends State<Descripcion> {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           Container(
             child: Padding(
@@ -58,6 +58,9 @@ class _DescripcionState extends State<Descripcion> {
                 ),
               ),
             ),
+          ),
+          SizedBox(
+            height: 10,
           ),
           Container(
             child: Padding(
