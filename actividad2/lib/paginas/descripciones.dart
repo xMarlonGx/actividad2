@@ -18,10 +18,10 @@ class _DescripcionState extends State<Descripcion> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromARGB(111, 67, 27, 114),
+        backgroundColor: Colors.deepPurple,
         title: Text(
           "Descripciones",
-          style: TextStyle(color: Colors.deepPurple),
+          style: TextStyle(color: Colors.white),
         ),
       ),
       body: MostrarDescipcion(),
