@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
-const List menu_home = ["Overview", "Talk", "Album", "Follow"];
+const List menu_home = [
+  "Animales",
+  "Paisajes",
+  "Montañas",
+  "Favoritos",
+  "Lista"
+];
 
 const List animales = [
   {

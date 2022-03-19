@@ -203,6 +203,15 @@ class _HomeState extends State<Home> {
                                 image: DecorationImage(
                                     image: AssetImage(animales[index]['img']),
                                     fit: BoxFit.cover)),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Center(
+                            child: Text(
+                              animales[index]['nombre'],
+                              style: TextStyle(color: Colors.deepPurple),
+                            ),
                           )
                         ],
                       ),
