@@ -67,7 +67,7 @@ class _PrincipalState extends State<Principal> {
         Home(),
         Center(
           child: Text(
-            "Home",
+            "Busqueda",
             style: TextStyle(
                 fontSize: 20,
                 color: Color.fromARGB(255, 138, 81, 236),
@@ -76,7 +76,7 @@ class _PrincipalState extends State<Principal> {
         ),
         Center(
           child: Text(
-            "Busqueda",
+            "Favoritos",
             style: TextStyle(
                 fontSize: 20,
                 color: Color.fromARGB(255, 138, 81, 236),
